@@ -1,0 +1,12 @@
+=== Free Space Notifyer ===
+Simple python script to run on windows servers that sends you emails when you are running out of space. 
+
+== Instructions == 
+
+This script monitors the amount of free space on the C: disk and emails you when there is less than 10% disk space
+
+To create a schedule task you can just run this command, changing the paths to apply to your environment.
+schtasks /Create /SC HOURLY /TN CalculateFreeDiskSpace /TR "C:\Python27\python.exe C:\Users\joe.pour\Documents\Python Projects\CalculateFreeDiskSpace.py"
+
+To check status of new scheduled task
+schtasks /Query /TN CalculateFreeDiskSpace
